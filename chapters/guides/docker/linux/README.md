@@ -82,7 +82,7 @@ Va trebui sa faci [pasul asta](#primesc-eroare-cand-scriu-in-shell-vivadonu-apar
 
 Exista 2 optiuni rapide:
 1. Instaleaza Xwayland si urmeaza setup-ul/configurarea pentru DE-ul/WM-ul tau
-2. Instaleaxa Xephyr si foloseste comanda aceasta: ```Xephyr -br -ac -noreset -screen 1920x1080 :1```. Inlocuieste 1920x1080 cu rezolutia folosita de tine, o sa se deschida o fereastra. Dupa scrii ```DISPLAY=:1 ssh -X -p 2222 root@localhost```. Gui-ul de la vivado va aparea in fereastra de tocmai s-a deschis
+2. Instaleaxa Xephyr si foloseste comanda aceasta: ```Xephyr -br -ac -noreset -screen 1920x1080 :1```. Inlocuieste 1920x1080 cu rezolutia folosita de tine, o sa se deschida o fereastra. Dupa scrii ```DISPLAY=:1 ssh -X -p 2222 root@localhost```. Gui-ul de la vivado va aparea in fereastra de tocmai s-a deschis. S-ar putea sa fie nevoie si de un ```unset XDG_SEAT``` [in cazul in care nu toate inputurile tastaturii sau mouse-ului nu sunt luate in considerare](https://unix.stackexchange.com/questions/690782/mouse-and-keyboard-not-getting-captured-by-xephyr)
 
 Mai multe detalii [aici](https://www.dbts-analytics.com/notesxfwdgb.html)
 
