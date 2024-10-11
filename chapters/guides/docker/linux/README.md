@@ -89,7 +89,7 @@ Exista mai multe cazuri:
 - [Nu ai server XOrg (mac os)](#am-macos-ce-fac)
 - None of the above
 
-In caz de none of the above intrati in ```.devcontainer/sshd_config``` si modificati linia ```X11UseLocalHost yes``` in ```X11UseLocalHost no```
+In caz de none of the above intrati in ```.devcontainer/sshd_config``` si modificati linia ```X11UseLocalHost yes``` in ```X11UseLocalHost no```. După, apasă ```Ctrl+Shift+P``` și alege ```Dev Containers: Rebuild and Reopen in Container```.
 ### Am wayland. Ce fac?
 Va trebui să faci [pasul asta](#primesc-eroare-cand-scriu-in-shell-vivadonu-apare-gui-ul).
 
