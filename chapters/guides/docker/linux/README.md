@@ -82,6 +82,14 @@ docker build -t vivado-slim-sshx .
 cd ..
 docker run -it -v /dev:/dev -p 2222:22 -v $PWD:/workspaces/computer-architecture vivado-slim-sshx
 ```
+
+### Am facut [pasul anterior](#primesc-eroare-când-scriu-în-shell-vivado--nu-apare-gui-ul) si tot nu forwardeaza
+Exista mai multe cazuri:
+- [Ai wayland](#am-wayland-ce-fac)
+- [Nu ai server XOrg (mac os)](#am-macos-ce-fac)
+- None of the above
+
+In caz de none of the above intrati in ```.devcontainer/sshd_config``` si modificati linia ```X11UseLocalHost yes``` in ```X11UseLocalHost no```
 ### Am wayland. Ce fac?
 Va trebui să faci [pasul asta](#primesc-eroare-cand-scriu-in-shell-vivadonu-apare-gui-ul).
 
@@ -113,3 +121,7 @@ INFO: Use Ctrl-C to exit hw_server application
 INFO: To connect to this hw_server instance use url: TCP:ba86b6047b8c:3121
 ```
 Copiază ce este între `TCP:` și `:3121` și folosește-l ca 'url' la conexiunea remote.
+
+### Am MacOS. Ce fac?
+Urmeaza [pasul acesta](#primesc-eroare-când-scriu-în-shell-vivado--nu-apare-gui-ul)
+Instaleaza [XQuartz](https://www.xquartz.org/) si o sa simuleze o instanta de xorg dupa logout
